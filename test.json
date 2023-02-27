@@ -1,0 +1,39 @@
+{"city": {
+    "coord": {"lat": 51.363, "lon": 1.0291},
+    "country": "GB",
+    "id": 2634021,
+    "name": "Whitstable",
+    "population": 30195,
+    "sunrise": 1677480377,
+    "sunset": 1677519086,
+    "timezone": 0
+        },
+        "cnt": 40,
+        "cod": "200",
+        "list": 
+        [
+            {
+                "clouds": [Object],
+                "dt": 1677499200,
+                "dt_txt": "2023-02-27 12:00:00",
+                "main": [Object],
+                "pop": 0,
+                "sys": [Object],
+                "visibility": 10000,
+                "weather": [Array],
+                "wind": [Object]
+            },
+            {
+                "clouds": [Object], 
+                "dt": 1677510000,
+                "dt_txt": "2023-02-27 15:00:00",
+                "main": [Object],
+                "pop": 0,
+                "sys": [Object],
+                "visibility": 10000,
+                "weather": [Array],
+                "wind": [Object]
+            }
+        ],
+        "message": 0
+    }

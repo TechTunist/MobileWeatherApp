@@ -1,11 +1,11 @@
 import React, { useState, useCallback } from "react";
-import { Button, StyleSheet, View, Text, ImageBackground, TextInput, Image, ActivityIndicator, FlatList } from 'react-native';
+import { Button, View, Text, ImageBackground, TextInput, Image, ActivityIndicator } from 'react-native';
 import axios from 'axios';
 import { styles } from './Styles';
 
 import { ScrollView } from 'react-native-gesture-handler';
 
-export function SearchScreen({navigation}) {
+export function SearchWeatherScreen({navigation}) {
 
 
     const [input, setInput] = useState("");
@@ -30,43 +30,6 @@ export function SearchScreen({navigation}) {
     }, [input, api]);
 
 
-    if (data === null) {
-        return (
-        <View style={styles.container}>
-            <ImageBackground
-            source={require('../assets/Android-rain.jpg')}
-            resizeMode="cover"
-            style={styles.image}>
-            <TextInput
-            placeholder='Enter location'
-            onChangeText={text => setInput(text)}
-            value={input}
-            placeholderTextColor={'#000'}
-            style={styles.textInput}
-            onSubmitEditing={fetchDataHandler}
-            />
-            {loading && (
-            <View>
-            <ActivityIndicator
-                size={'large'}
-                color={'black'}
-            />
-            </View>
-            )}
-            <View style={styles.infoView}>
-                <Text style={styles.dateText}>
-                {new Date().toLocaleDateString()}
-                </Text>
-            </View>
-            <Button
-              title='Button to next screen'
-              onPress={() => navigation.navigate('MapScreen')}
-              style={styles.button}/>
-            </ImageBackground>
-        </View>
-        );
-    }
-    else {
         return (
         <View style={styles.container}>
             <ImageBackground
@@ -121,5 +84,15 @@ export function SearchScreen({navigation}) {
             </ImageBackground>
         </View>
         );
+
+
+
+        
+
+
+
+
+
+
     }
-}
+

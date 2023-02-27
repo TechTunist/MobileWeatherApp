@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Button, StyleSheet, View, Text, ImageBackground, TextInput, Image } from 'react-native';
+import { StyleSheet } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
-import { styles } from './Styles';
 import * as Location from 'expo-location';
 
 export function MapScreen({navigation}) {
 
-  const [location, setLocation] = useState();
+  const [map, setMap] = useState();
 
       // useEffect is a hook that runs after the component is rendered
       useEffect(() => {
@@ -19,7 +18,7 @@ export function MapScreen({navigation}) {
         }
 
         let loc = await Location.getCurrentPositionAsync({});
-        setLocation({
+        setMap({
           latitude: loc.coords.latitude,
           longitude: loc.coords.longitude,
           // latitude: 23.259933,
@@ -39,7 +38,7 @@ export function MapScreen({navigation}) {
         style={StyleSheet.absoluteFillObject}
         provider={PROVIDER_GOOGLE}
         mapType='hybrid'
-        region={location}
+        region={map}
         >
           <Marker coordinate={{ latitude: 23.259933, longitude: 77.412613 }}/>
       </MapView>

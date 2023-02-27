@@ -13,14 +13,13 @@ const styles = StyleSheet.create({
   },
   textInput: {
     width: '100%',
-    padding: 5,    
-    paddingVertical: 13,
-    marginVertical: '10%',
-    marginRight: 'auto', 
+    padding: 13,
+    marginBottom: 10,
     backgroundColor: '#fff',
     fontsize: 22,
     borderRadius: 16,
     position: 'absolute',
+    bottom: 0
   },
   infoView: {
     flex: 1,
@@ -31,7 +30,9 @@ const styles = StyleSheet.create({
   locationText: {
     color: '#fff',
     fontSize: 30,
-    paddingLeft: 10
+    paddingLeft: 10,
+    paddingBottom: 10,
+    textAlign: 'center'
   },
   dateText: {
     color: '#fff',
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
   },
   humidText: {
       color: '#fff',
-      fontSize: 25,
+      fontSize: 15,
       // marginVertical: 10,
     },
   tempText: {
@@ -47,10 +48,9 @@ const styles = StyleSheet.create({
     color: '#fff',
     
   },
-  button: {
+  buttonView: {
     width: '100%',
-    height: 50,
-    backgroundColor: 'red',
+    height: 60,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -60,10 +60,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  dateTimeContainer: {
+  mainDataContainer: {
     // flex:1.5,
-    flexDirection:"row",
-    justifyContent:'space-between',
+    // flexDirection:"row",
+    // justifyContent:'space-between',
     padding: 15
 },
 heading: {
@@ -76,10 +76,10 @@ subheading: {
     color: '#eee',
     fontWeight: '300'
 },
-rightAlign: {
-    textAlign:'right',
-    marginTop: 20
-},
+// rightAlign: {
+//     textAlign:'right',
+//     marginTop: 20
+// },
 timezone: {
     fontSize: 20,
     color:'white'
@@ -96,8 +96,48 @@ weatherItem: {
 },
 weatherItemTitle: {
     color:'#eee',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '100'
+},
+description: {
+  borderRadius: 10,
+  paddingLeft: 25,
+},
+forecastDescription: {
+  // flex: 1,
+  flexDirection: 'row',
+},
+imageForecast: {
+  width: 50,
+  height: 50,        
+}, 
+forecastContainer: {
+  flex:1,
+  justifyContent: 'center',
+  backgroundColor: '#00000033',
+  borderRadius:10,
+  borderColor:"#eee",
+  borderWidth:1,
+  padding: 20,
+  marginLeft: 10,
+  height: '100%'
+},    
+forecastTemp: {
+  fontSize: 20,
+  color:"white",
+  fontWeight:"100",
+  textAlign:"center",
+},
+forecastImageContainer: {
+  alignItems: 'center', 
+  justifyContent: 'center'
+},
+forecastDate: {
+  fontSize: 16,
+  color:"white",
+  fontWeight:"100",
+  textAlign:"center",
+  marginBottom: 10
 }
 })
 
